@@ -15,8 +15,7 @@ except ImportError:
 from django.db.models.fields.files import FieldFile
 
 
-FILE_COMPRESS_DELETE_OLD_FILE = getattr(settings,
-                                        'FILE_COMPRESS_DELETE_OLD_FILE', True)
+FILE_COMPRESS_DELETE_OLD_FILE = True
 
 
 class CompressFieldFile(FieldFile):
