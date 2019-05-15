@@ -34,7 +34,7 @@ def task_compress_wrapper(instance, field, delete_old_file):
 
     if acquire_lock(lock_id):
         instance_field = getattr(instance, field)
-        instance_field.compress(async=False, delete_old_file=delete_old_file)
+        instance_field.compress(_async=False, delete_old_file=delete_old_file)
         release_lock(lock_id)
         return True
 
